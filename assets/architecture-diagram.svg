@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550" width="900" height="550">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="orbGlow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#0f0f1e"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="550" fill="url(#bg)"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#e6a817" font-family="monospace" font-size="18" font-weight="bold">MAYA Architecture</text>
+  <line x1="350" y1="50" x2="550" y2="50" stroke="#e6a817" stroke-opacity="0.3" stroke-width="1"/>
+  
+  <!-- USER REQUEST node -->
+  <rect x="325" y="65" width="250" height="36" rx="6" fill="#1a1a2e" stroke="#e6a817" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="450" y="88" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="13">USER REQUEST</text>
+  
+  <!-- Arrow 1 -->
+  <line x1="450" y1="101" x2="450" y2="125" stroke="#e6a817" stroke-opacity="0.4" stroke-width="1.5"/>
+  <polygon points="445,123 450,130 455,123" fill="#e6a817" fill-opacity="0.4"/>
+  
+  <!-- ARC/ACE node -->
+  <rect x="275" y="130" width="350" height="50" rx="8" fill="#1a1a2e" stroke="#e6a817" stroke-opacity="0.7" stroke-width="1.5"/>
+  <circle cx="300" cy="155" r="12" fill="none" stroke="#e6a817" stroke-width="1.5" filter="url(#orbGlow)"/>
+  <text x="318" y="152" text-anchor="start" fill="#e6a817" font-family="monospace" font-size="14" font-weight="bold">ARC / ACE</text>
+  <text x="318" y="170" text-anchor="start" fill="#a0a0a0" font-family="monospace" font-size="10">Context Engine — "What matters right now?"</text>
+  
+  <!-- Arrow 2 -->
+  <line x1="450" y1="180" x2="450" y2="204" stroke="#e6a817" stroke-opacity="0.4" stroke-width="1.5"/>
+  <polygon points="445,202 450,209 455,202" fill="#e6a817" fill-opacity="0.4"/>
+  
+  <!-- GATEKEEPER node -->
+  <rect x="300" y="209" width="300" height="42" rx="6" fill="#1a1a2e" stroke="#e6a817" stroke-opacity="0.6" stroke-width="1.5"/>
+  <text x="315" y="232" text-anchor="start" fill="#e6a817" font-family="monospace" font-size="13" font-weight="bold">▣ GATEKEEPER</text>
+  <text x="315" y="246" text-anchor="start" fill="#a0a0a0" font-family="monospace" font-size="10">Permission Check — allow / confirm / block</text>
+  
+  <!-- Arrow 3 -->
+  <line x1="450" y1="251" x2="450" y2="275" stroke="#e6a817" stroke-opacity="0.4" stroke-width="1.5"/>
+  <polygon points="445,273 450,280 455,273" fill="#e6a817" fill-opacity="0.4"/>
+  
+  <!-- MODEL ROUTER node -->
+  <rect x="300" y="280" width="300" height="42" rx="6" fill="#1a1a2e" stroke="#d4a017" stroke-opacity="0.6" stroke-width="1.5"/>
+  <text x="315" y="303" text-anchor="start" fill="#d4a017" font-family="monospace" font-size="13" font-weight="bold">◉ MODEL ROUTER</text>
+  <text x="315" y="317" text-anchor="start" fill="#a0a0a0" font-family="monospace" font-size="10">Best model? Cost? Privacy? Speed?</text>
+  
+  <!-- Arrow 4 -->
+  <line x1="450" y1="322" x2="450" y2="346" stroke="#e6a817" stroke-opacity="0.4" stroke-width="1.5"/>
+  <polygon points="445,344 450,351 455,344" fill="#e6a817" fill-opacity="0.4"/>
+  
+  <!-- TOOL REGISTRY node -->
+  <rect x="325" y="351" width="250" height="42" rx="6" fill="#1a1a2e" stroke="#b8860b" stroke-opacity="0.5" stroke-width="1.5"/>
+  <text x="340" y="374" text-anchor="start" fill="#b8860b" font-family="monospace" font-size="13" font-weight="bold">⚙ TOOL REGISTRY</text>
+  <text x="340" y="388" text-anchor="start" fill="#a0a0a0" font-family="monospace" font-size="10">What tools are available?</text>
+  
+  <!-- Arrow 5 -->
+  <line x1="450" y1="393" x2="450" y2="417" stroke="#e6a817" stroke-opacity="0.4" stroke-width="1.5"/>
+  <polygon points="445,415 450,422 455,415" fill="#e6a817" fill-opacity="0.4"/>
+  
+  <!-- RECORDER node -->
+  <rect x="300" y="422" width="300" height="42" rx="6" fill="#1a1a2e" stroke="#4caf50" stroke-opacity="0.6" stroke-width="1.5"/>
+  <text x="315" y="445" text-anchor="start" fill="#4caf50" font-family="monospace" font-size="13" font-weight="bold">◎ RECORDER</text>
+  <text x="315" y="459" text-anchor="start" fill="#a0a0a0" font-family="monospace" font-size="10">Audit Trail — "What happened?"</text>
+  
+  <!-- Arrow 6 -->
+  <line x1="450" y1="464" x2="450" y2="488" stroke="#e6a817" stroke-opacity="0.4" stroke-width="1.5"/>
+  <polygon points="445,486 450,493 455,486" fill="#e6a817" fill-opacity="0.4"/>
+  
+  <!-- RESPONSE node -->
+  <rect x="325" y="493" width="250" height="36" rx="6" fill="#1a1a2e" stroke="#4caf50" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="450" y="516" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="13">RESPONSE + RECEIPTS</text>
+  
+  <!-- Side labels -->
+  <text x="50" y="160" text-anchor="start" fill="#a0a0a0" font-family="monospace" font-size="9">CONTEXT</text>
+  <text x="50" y="235" text-anchor="start" fill="#a0a0a0" font-family="monospace" font-size="9">TRUST</text>
+  <text x="50" y="305" text-anchor="start" fill="#a0a0a0" font-family="monospace" font-size="9">INTELLIGENCE</text>
+  <text x="50" y="375" text-anchor="start" fill="#a0a0a0" font-family="monospace" font-size="9">CAPABILITY</text>
+  <text x="50" y="448" text-anchor="start" fill="#a0a0a0" font-family="monospace" font-size="9">ACCOUNTABILITY</text>
+  
+  <!-- Right annotations -->
+  <text x="750" y="160" text-anchor="start" fill="#a0a0a0" font-family="monospace" font-size="9">Memory, Profile,</text>
+  <text x="750" y="172" text-anchor="start" fill="#a0a0a0" font-family="monospace" font-size="9">Project, Docs</text>
+  
+  <text x="750" y="235" text-anchor="start" fill="#a0a0a0" font-family="monospace" font-size="9">Scoped Permissions</text>
+  <text x="750" y="247" text-anchor="start" fill="#a0a0a0" font-family="monospace" font-size="9">Risk Levels</text>
+  
+  <text x="750" y="305" text-anchor="start" fill="#a0a0a0" font-family="monospace" font-size="9">OpenAI · DeepSeek</text>
+  <text x="750" y="317" text-anchor="start" fill="#a0a0a0" font-family="monospace" font-size="9">Gemini · Local</text>
+  
+  <text x="750" y="448" text-anchor="start" fill="#a0a0a0" font-family="monospace" font-size="9">Every action logged</text>
+  <text x="750" y="460" text-anchor="start" fill="#a0a0a0" font-family="monospace" font-size="9">Every decision traced</text>
+</svg>
