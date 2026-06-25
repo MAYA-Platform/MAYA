@@ -23,27 +23,9 @@
 
 ## Architecture
 
-```
-User Request
-    │
-    ▼
-ARC ─── Context Engine (what matters right now?)
-    │
-    ▼
-Gatekeeper ─── Permission Check (allowed? confirm? blocked?)
-    │
-    ▼
-Model Router ─── Best model for this task?
-    │
-    ▼
-Tool Registry ─── What tools does this need?
-    │
-    ▼
-Recorder ─── Audit log (what happened?)
-    │
-    ▼
-Response ─── Back to user, with receipts
-```
+<p align="center">
+  <img src="assets/architecture-diagram.svg" alt="MAYA Architecture" width="800">
+</p>
 
 Every request flows through the same spine. Nothing skips the Gatekeeper. Nothing escapes the Recorder. That's not a feature — that's the architecture.
 
@@ -103,7 +85,7 @@ This is a **soft launch** — the architecture is real, the core surfaces are ru
 
 ## Stay Connected
 
-- **GitHub:** [github.com/MAYA-OS](https://github.com/MAYA-OS)
+- **GitHub:** [github.com/MAYA-Platform/MAYA](https://github.com/MAYA-Platform/MAYA)
 - **Built by:** [2ndNatureAI](https://github.com/2ndNatureAI)
 
 ---
