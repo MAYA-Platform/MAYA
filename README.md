@@ -91,3 +91,47 @@ This is a **soft launch** — the architecture is real, the core surfaces are ru
 ---
 
 *MAYA is protective intelligence. Not a black box. Not a data moat. An operating layer you can see, audit, and trust.*
+
+---
+
+## What's in This Repo
+
+This is the public soft-launch of the MAYA architecture. It contains:
+
+### Tools (`tools/`)
+
+| Tool | What It Does |
+|---|---|
+| **Multi-Router** (`tools/multi-router/`) | Intent-aware model router — classifies tasks and recommends the best provider |
+| **Provider Switch** (`tools/provider-switch/`) | One-click LLM/vision provider switching with fallback chains |
+| **Usage Widget** (`tools/maya-usage-widget/`) | Live provider quota, cost tracking, and model health monitor |
+| **Staff Tracker** (`tools/staff-tracker/`) | Visual agent status board for multi-agent systems |
+
+### Assets (`assets/`)
+
+- `architecture-diagram.svg` — The MAYA architecture spine: ARC → Gatekeeper → Router → Recorder
+- `org-avatar.png` — 2ndNatureAI organization avatar
+
+### Quick Start
+
+```bash
+pip install -r requirements.txt
+python tools/multi-router/maya_multi_router.py
+python tools/provider-switch/provider_switch.py
+python tools/maya-usage-widget/maya_usage_widget.py
+python tools/staff-tracker/staff_tracker.py
+```
+
+Each tool is a standalone Python desktop app (tkinter). Dark MAYA theme. No API keys included — bring your own.
+
+---
+
+## Stay Connected
+
+- **GitHub:** [github.com/MAYA-Platform/MAYA](https://github.com/MAYA-Platform/MAYA)
+- **Built by:** [2ndNatureAI](https://github.com/2ndNatureAI)
+- **License:** MIT (see [LICENSE](LICENSE))
+
+---
+
+*MAYA is protective intelligence. Not a black box. Not a data moat. An operating layer you can see, audit, and trust.*

@@ -1,0 +1,1 @@
+# stdlib tkinter desktop widget; no third-party requirements
