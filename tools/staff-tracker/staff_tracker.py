@@ -34,48 +34,80 @@ SCHEDULED = "#1a2a4a" # blue indicator
 # ── Agent Registry ──
 AGENTS = {
     # Intelligence
-    "Sagan":     {"cron": "4715d13c843e", "layer": "Intelligence", "role": "Technical Scout"},
-    "Echo":      {"cron": "f628535fb5b9", "layer": "Intelligence", "role": "Social Scout"},
-    "Raven":     {"cron": "a9614e4f63c0", "layer": "Intelligence", "role": "Market Scout"},
-    "Shadow":    {"cron": "19572184f28a", "layer": "Intelligence", "role": "Synthesis / Banker"},
+    "Sagan":     {"cron": "4715d13c843e", "layer": "Intelligence", "role": "Technical Scout",
+                  "blurb": "Scours GitHub, HN, and dev blogs for bleeding-edge tech signals. If it compiles, Sagan saw it first."},
+    "Echo":      {"cron": "f628535fb5b9", "layer": "Intelligence", "role": "Social Scout",
+                  "blurb": "Listens to the social web — Twitter, Reddit, Discord. Filters noise into signal before breakfast."},
+    "Raven":     {"cron": "a9614e4f63c0", "layer": "Intelligence", "role": "Market Scout",
+                  "blurb": "Tracks competitors, pricing moves, and market shifts. Never misses a funding round or pivot."},
+    "Shadow":    {"cron": "19572184f28a", "layer": "Intelligence", "role": "Synthesis / Banker",
+                  "blurb": "The last mile of intelligence. Distills everything Sagan, Echo, and Raven found into one tight brief."},
     # Discovery
-    "Flint":     {"cron": "0eeb52a9fadd", "layer": "Discovery", "role": "Prospector"},
-    "Darwin":    {"cron": "44304a629615", "layer": "Discovery", "role": "Ecosystem Watch"},
-    "Holmes":    {"cron": "187ccfedf5e9", "layer": "Discovery", "role": "Personality Scout"},
+    "Flint":     {"cron": "0eeb52a9fadd", "layer": "Discovery", "role": "Prospector",
+                  "blurb": "Pans the streams for golden repos. Finds projects before they trend. The original open-source bloodhound."},
+    "Darwin":    {"cron": "44304a629615", "layer": "Discovery", "role": "Ecosystem Watch",
+                  "blurb": "Watches package registries, SDK releases, and framework shifts. Knows what's fit to survive."},
+    "Holmes":    {"cron": "187ccfedf5e9", "layer": "Discovery", "role": "Personality Scout",
+                  "blurb": "Profiles key people — who's shipping, who's hiring, who's worth watching. The org chart in his head."},
     # Maintenance
-    "Rust":      {"cron": "535b0c93de50", "layer": "Maintenance", "role": "Link Rot Checker"},
-    "Plumb":     {"cron": "a7481bac3141", "layer": "Maintenance", "role": "Desktop Health"},
-    "Cerberus":  {"cron": "2e9a60212102", "layer": "Maintenance", "role": "API Key Janitor"},
-    "Argus":     {"cron": "d011d096dfc5", "layer": "Maintenance", "role": "Cron Health Watchdog"},
-    "Vantage":   {"cron": "00fd41687bbc", "layer": "Maintenance", "role": "Repo Watchtower"},
+    "Rust":      {"cron": "535b0c93de50", "layer": "Maintenance", "role": "Link Rot Checker",
+                  "blurb": "Chases 404s like a terrier. Nothing rusts on his watch. Link rot is a personal insult."},
+    "Plumb":     {"cron": "a7481bac3141", "layer": "Maintenance", "role": "Desktop Health",
+                  "blurb": "Keeps the pipes clear — disk space, memory, running services. Your desktop's silent guardian."},
+    "Cerberus":  {"cron": "2e9a60212102", "layer": "Maintenance", "role": "API Key Janitor",
+                  "blurb": "Three heads, one job: make sure every API key is valid, rotated, and never committed to a repo."},
+    "Argus":     {"cron": "d011d096dfc5", "layer": "Maintenance", "role": "Cron Health Watchdog",
+                  "blurb": "Hundred eyes on every cron job. If a schedule fails, Argus knew five minutes before you did."},
+    "Vantage":   {"cron": "00fd41687bbc", "layer": "Maintenance", "role": "Repo Watchtower",
+                  "blurb": "Perched above every MAYA repo. New commits, stale branches, merge conflicts — nothing escapes the tower."},
     # Memory
-    "Scribe":    {"cron": "bf10c46c55e1", "layer": "Memory", "role": "Session Scout"},
-    "Quill":     {"cron": "a8e568016a0f", "layer": "Memory", "role": "Personal Note-Taker"},
-    "Alembic":   {"cron": "dcd8b655c3a9", "layer": "Memory", "role": "Memory Distiller"},
+    "Scribe":    {"cron": "bf10c46c55e1", "layer": "Memory", "role": "Session Scout",
+                  "blurb": "Reads every session, finds every insight. Your second brain's librarian — Dewey Decimal but cooler."},
+    "Quill":     {"cron": "a8e568016a0f", "layer": "Memory", "role": "Personal Note-Taker",
+                  "blurb": "Catches the thoughts you didn't write down. Drafts, ideas, late-night brain dumps — all filed."},
+    "Alembic":   {"cron": "dcd8b655c3a9", "layer": "Memory", "role": "Memory Distiller",
+                  "blurb": "Takes raw memory and distills it into pure gold. Redundancy? Gone. Clarity? Amplified. The alchemist of recall."},
     # Builder
-    "Forge":     {"cron": "8f27ce7914b8", "layer": "Builder", "role": "Builder Pulse"},
-    "Nova":      {"cron": "8f27ce7914b8", "layer": "Builder", "role": "Frontend Designer"},
-    "Anchor":    {"cron": "21e16359bb42", "layer": "Builder", "role": "Git Checkpoint"},
-    "Dewey":     {"cron": "933383f2ded0", "layer": "Builder", "role": "Command Library"},
+    "Forge":     {"cron": "8f27ce7914b8", "layer": "Builder", "role": "Builder Pulse",
+                  "blurb": "The heartbeat of the build pipeline. Temps the metal, counts the commits, keeps the fire hot."},
+    "Nova":      {"cron": "8f27ce7914b8", "layer": "Builder", "role": "Frontend Designer",
+                  "blurb": "Pixels, not promises. MAYA's UI doesn't ship until Nova says it glows. Dark mode evangelist."},
+    "Anchor":    {"cron": "21e16359bb42", "layer": "Builder", "role": "Git Checkpoint",
+                  "blurb": "Commits at every safe harbor. If the repo goes sideways, Anchor knows exactly where to roll back."},
+    "Dewey":     {"cron": "933383f2ded0", "layer": "Builder", "role": "Command Library",
+                  "blurb": "Catalogues every CLI incantation. One-liners, aliases, scripts — Dewey's got the spellbook."},
     # Security
-    "Sage":      {"cron": "cef52a8d50d1", "layer": "Security", "role": "Ethical Hacker"},
+    "Sage":      {"cron": "cef52a8d50d1", "layer": "Security", "role": "Ethical Hacker",
+                  "blurb": "Pokes holes so the bad guys can't. White-hat by trade, paranoid by nature. Trust nothing, verify everything."},
     # Operations
-    "Chief":     {"cron": "6fc8244c573c", "layer": "Operations", "role": "Ops Commander"},
+    "Chief":     {"cron": "6fc8244c573c", "layer": "Operations", "role": "Ops Commander",
+                  "blurb": "Runs the war room. Coordinates every agent, every cron, every deploy. If Chief is green, MAYA is green."},
     # Delivery
-    "Herald":    {"cron": "dc473e7b37c5", "layer": "Delivery", "role": "Hermes Debrief"},
-    "Shepherd":  {"cron": "a726aa157d9d", "layer": "Delivery", "role": "Business Follow-Up"},
-    "Prism":     {"cron": "31ccac782e29", "layer": "Delivery", "role": "Work Review"},
-    "Lumen":     {"cron": "9989f584c559", "layer": "Delivery", "role": "ARC Memory Review"},
+    "Herald":    {"cron": "dc473e7b37c5", "layer": "Delivery", "role": "Hermes Debrief",
+                  "blurb": "The voice that closes every session. Summarizes what happened, what changed, and what needs attention."},
+    "Shepherd":  {"cron": "a726aa157d9d", "layer": "Delivery", "role": "Business Follow-Up",
+                  "blurb": "Rounds up every loose thread from calls, emails, and meetings. Nothing falls through the cracks."},
+    "Prism":     {"cron": "31ccac782e29", "layer": "Delivery", "role": "Work Review",
+                  "blurb": "Splits every work product into its component parts. Clarity through refraction. No fuzzy deliverables."},
+    "Lumen":     {"cron": "9989f584c559", "layer": "Delivery", "role": "ARC Memory Review",
+                  "blurb": "Shines a light on memory quality. What's fresh, what's stale, what's missing. The memory illuminator."},
     # Infrastructure
-    "Ticker":    {"cron": "ab596ac42718", "layer": "Infrastructure", "role": "MVP Links"},
-    "Cipher":    {"cron": "0280191866d9", "layer": "Infrastructure", "role": "KV Prefix"},
-    "Ember":     {"cron": "f99327ddd207", "layer": "Infrastructure", "role": "CRL Cache Warmer"},
-    "Galen":     {"cron": "666e017ebee7", "layer": "Infrastructure", "role": "Health Check"},
+    "Ticker":    {"cron": "ab596ac42718", "layer": "Infrastructure", "role": "MVP Links",
+                  "blurb": "Keeps the critical links live. Every MVP endpoint, every dashboard — Ticker watches the pulse."},
+    "Cipher":    {"cron": "0280191866d9", "layer": "Infrastructure", "role": "KV Prefix",
+                  "blurb": "Manages the key-value namespace. No collisions, no drift, no mystery keys. The KV namespace sovereign."},
+    "Ember":     {"cron": "f99327ddd207", "layer": "Infrastructure", "role": "CRL Cache Warmer",
+                  "blurb": "Keeps the cache toasty. Pre-warms before you need it. Cold starts are for amateurs."},
+    "Galen":     {"cron": "666e017ebee7", "layer": "Infrastructure", "role": "Health Check",
+                  "blurb": "The diagnostician. Checks vitals on every service. If something's sick, Galen finds the symptom first."},
     # Gaming
-    "Kai":       {"cron": "7f3ba6f7d41d", "layer": "Gaming", "role": "Aggressive Gamer"},
-    "Zen":       {"cron": "f627dcbec068", "layer": "Gaming", "role": "Methodical Gamer"},
+    "Kai":       {"cron": "7f3ba6f7d41d", "layer": "Gaming", "role": "Aggressive Gamer",
+                  "blurb": "Rushes in, no fear, all aggro. If there's a meta-breaking strat, Kai already died trying it — and learned."},
+    "Zen":       {"cron": "f627dcbec068", "layer": "Gaming", "role": "Methodical Gamer",
+                  "blurb": "Turtles up, controls the board. Every move calculated. Zen wins the war Kai started."},
     # Hardware
-    "Watts":     {"cron": "e87ea9eb81e4", "layer": "Hardware", "role": "Hardware Engineer"},
+    "Watts":     {"cron": "e87ea9eb81e4", "layer": "Hardware", "role": "Hardware Engineer",
+                  "blurb": "Lives at the silicon level. GPU temps, power draw, thermal throttling — Watts speaks volts and amps."},
 }
 
 LAYER_COLORS = {
@@ -250,7 +282,7 @@ class StaffTracker(tk.Tk):
                 tk.Label(sep, text=f"  {layer.upper()}", bg=BG, fg=color,
                          font=("Segoe UI", 7, "bold")).pack(side=tk.LEFT)
 
-            row = tk.Frame(self.agent_frame, bg=CARD_BG, height=28)
+            row = tk.Frame(self.agent_frame, bg=CARD_BG, height=40)
             row.pack(fill=tk.X, padx=4, pady=1)
             row.pack_propagate(False)
 
@@ -259,15 +291,28 @@ class StaffTracker(tk.Tk):
                            font=("Segoe UI", 12))
             dot.pack(side=tk.LEFT, padx=(6, 2))
 
-            # Name
-            name_lbl = tk.Label(row, text=name, bg=CARD_BG, fg=TEXT,
-                                font=("Segoe UI", 8, "bold"), width=10, anchor=tk.W)
-            name_lbl.pack(side=tk.LEFT, padx=2)
+            # Name + role + blurb in a vertical stack
+            info_col = tk.Frame(row, bg=CARD_BG)
+            info_col.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=2, pady=2)
 
-            # Role
-            role_lbl = tk.Label(row, text=info["role"], bg=CARD_BG, fg=DIM,
-                                font=("Segoe UI", 7), width=18, anchor=tk.W)
-            role_lbl.pack(side=tk.LEFT, padx=2)
+            name_frame = tk.Frame(info_col, bg=CARD_BG)
+            name_frame.pack(fill=tk.X)
+            name_lbl = tk.Label(name_frame, text=name, bg=CARD_BG, fg=TEXT,
+                                font=("Segoe UI", 8, "bold"), anchor=tk.W)
+            name_lbl.pack(side=tk.LEFT)
+
+            role_lbl = tk.Label(name_frame, text=f"— {info['role']}", bg=CARD_BG, fg=DIM,
+                                font=("Segoe UI", 7), anchor=tk.W)
+            role_lbl.pack(side=tk.LEFT, padx=4)
+
+            # Personality blurb
+            blurb = info.get("blurb", "")
+            if blurb:
+                blurb_lbl = tk.Label(info_col, text=blurb, bg=CARD_BG, fg=DIM,
+                                     font=("Segoe UI", 6), anchor=tk.W, wraplength=300)
+                blurb_lbl.pack(fill=tk.X)
+            else:
+                blurb_lbl = tk.Label(info_col, text="", bg=CARD_BG)
 
             # Next run / status
             status_lbl = tk.Label(row, text="", bg=CARD_BG, fg=DIM,
@@ -281,7 +326,7 @@ class StaffTracker(tk.Tk):
 
             self.agent_widgets[name] = {
                 "dot": dot, "status": status_lbl, "health": health_dot,
-                "name": name_lbl, "role": role_lbl, "row": row
+                "name": name_lbl, "role": role_lbl, "row": row, "blurb": blurb_lbl
             }
 
     def _refresh(self):
