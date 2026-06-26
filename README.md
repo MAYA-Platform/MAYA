@@ -39,6 +39,7 @@ Every request flows through the same spine. Nothing skips the Gatekeeper. Nothin
 | **Recorder** | ✅ Live | Audit trail — what ran, when, why, result |
 | **Multi-Model Router** | ✅ Live | Routes tasks to OpenAI, DeepSeek, Gemini, or local models |
 | **ARC Context Engine** | ✅ Live | Selects relevant context per request — memory, profile, project |
+| **MoE Routing** | ✅ Live | Mixture of Experts — routes to specialized model experts |
 | **Property Management Demo** | ✅ Live | Inbound message → classify → draft → approve → receipt |
 | **Cron Dashboard** | ✅ Live | Scheduled job management with suggestion detection |
 | **Usage Dashboard** | ✅ Live | Live provider quota, cost tracking, model health |
@@ -102,10 +103,12 @@ This is the public soft-launch of the MAYA architecture. It contains:
 
 | Tool | What It Does |
 |---|---|
-| **Multi-Router** (`tools/multi-router/`) | Intent-aware model router — classifies tasks and recommends the best provider |
+| **ARC Context Engine** (`tools/arc-context-engine/`) | Live context classification dashboard — shows what mode you're in, which model gets routed, and what permissions are granted |
+| **Gatekeeper** (`tools/gatekeeper/`) | Permission dashboard — every tool, every risk level, every grant/deny decision visible in real time |
+| **MoE Routing** (`tools/moe-routing/`) | Mixture of Experts visualization — which expert is active, load distribution, confidence scores |
 | **Provider Switch** (`tools/provider-switch/`) | One-click LLM/vision provider switching with fallback chains |
 | **Usage Widget** (`tools/maya-usage-widget/`) | Live provider quota, cost tracking, and model health monitor |
-| **Staff Tracker** (`tools/staff-tracker/`) | Visual agent status board for multi-agent systems |
+| **Staff Tracker** (`tools/staff-tracker/`) | Visual agent status board with personality blurbs for every specialist agent |
 
 ### Assets (`assets/`)
 
@@ -116,7 +119,9 @@ This is the public soft-launch of the MAYA architecture. It contains:
 
 ```bash
 pip install -r requirements.txt
-python tools/multi-router/maya_multi_router.py
+python tools/arc-context-engine/arc_context_engine.py
+python tools/gatekeeper/gatekeeper.py
+python tools/moe-routing/moe_routing.py
 python tools/provider-switch/provider_switch.py
 python tools/maya-usage-widget/maya_usage_widget.py
 python tools/staff-tracker/staff_tracker.py
