@@ -1,0 +1,2 @@
+# ARC Context Engine — no external dependencies beyond Python stdlib
+# Requires: Python 3.8+ with tkinter
